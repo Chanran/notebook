@@ -69,7 +69,7 @@ class DataManager {
       return false
     }
 
-    const createTime = new Date().getItem()
+    const createTime = new Date().getTime()
     const modifyTime = createTime
     const result = this.editNote(title, content, createTime, modifyTime)
     if (result) {
@@ -98,6 +98,6 @@ class DataManager {
   }
 }
 
-const storageInstance = new DataManager()
+const dataManagerInstance = new DataManager()
 
-export default storageInstance
+export default dataManagerInstance
