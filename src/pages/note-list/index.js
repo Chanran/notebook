@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import {Button, Input} from 'antd';
-import {StyledContainer} from '../../common/commonStyle';
+import {StyledContainer} from '../../bizCommon/commonStyle';
 
 const StyledConfirmButton = styled(Button)`
   margin-top: 20px;

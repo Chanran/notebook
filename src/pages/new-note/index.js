@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import {Button, Input} from 'antd';
 
-import {StyledContainer} from '../../common/commonStyle';
+import {StyledContainer} from '../../bizCommon/commonStyle';
 
 const StyledTextarea = styled(Input.TextArea)`
   width: 300px;
