@@ -9,7 +9,7 @@ import NoteList from './pages/note-list'
 
 const Routes = () => (
   <HashRouter>
-    <div>
+    <div id="app-container">
       <Route exact path="/" render={() => <Redirect to="/NewNote" />} />
       <Switch>
         <Route path="/NewNote" component={NewNote} />
