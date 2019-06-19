@@ -1,6 +1,6 @@
 import storage from '../common/localStorage'
 
-const appKey = 'blue_notebook_'
+const appKey = 'blue_notebook'
 
 const historyPrefix = `${appKey}_history`
 const contentPrefix = `${appKey}_detail`
@@ -56,9 +56,9 @@ class DataManager {
     return result
   }
 
-  checkIsNoteExsit (title) {
+  getNoteDetail (title) {
     const noteKey = this._getNoteKey(title)
-    return !!storage.getItem(noteKey)
+    return storage.getItem(noteKey)
   }
 
   newNote (title, content) {
@@ -88,6 +88,7 @@ class DataManager {
     if (createTime) {
       value.createTime = createTime
     }
+    this._editNoteListItem(noteKey, title, modifyTime)
     return storage.setItem(noteKey, value)
   }
 
