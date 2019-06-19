@@ -16,9 +16,10 @@ class Storage {
     key = key.toString()
 
     try {
+      let tmp = value
       value = JSON.stringify(value)
       storage.setItem(key, value) 
-      return value
+      return tmp
     } catch (error) {
       console.error(error)
       return false

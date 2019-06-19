@@ -66,6 +66,11 @@ export default class NewNote extends Component {
 
   newNote = () => {
     const {title, note} = this.state;
+
+    if (!title) {
+      message.warn('标题不能为空')
+    }
+
     const result = dataManager.newNote(title, note)
     if (result) {
       message.success('新建成功')

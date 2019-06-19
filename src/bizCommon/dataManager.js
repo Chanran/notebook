@@ -62,8 +62,12 @@ class DataManager {
   }
 
   newNote (title, content) {
-    const noteKey = this._getNoteKey(title)
+    if (!title) {
+      console.error('title can not be empty')
+      return false
+    }
     
+    const noteKey = this._getNoteKey(title)
     if (storage.getItem(noteKey)) {
       console.error('note exsit!')
       return false
