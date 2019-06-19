@@ -23,8 +23,8 @@ yarn start
 
 ## 技术
 
-脚手架：create react app
-css：styled-component
-ui框架：ant-design
+- 脚手架：create react app
+- css：styled-component
+- ui框架：ant-design
 
 
