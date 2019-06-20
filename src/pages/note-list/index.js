@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import styled from 'styled-px2vw'
 import {Button, Input, message} from 'antd'
 import {StyledContainer} from '../../bizCommon/commonStyle'
 import dataManager from '../../bizCommon/dataManager'
@@ -10,7 +10,7 @@ const StyledNoteList = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 300px;
+  width: 600px;
   max-height: 500px;
   overflow-y: scroll;
   font-size: 20px;
@@ -19,40 +19,40 @@ const StyledNoteList = styled.div`
 const StyledNoteContainer = styled.div`
   display: flex;
   align-items: center;
-  height: 40px;
+  height: 60px;
   margin-bottom: 5px;
 `
 const StyledNoteItem = styled(Link)`
   display: flex;
   align-items: center;
-  margin-right: 5px;
+  margin-right: 10px;
   border-radius: 5px;
   height: 100%;
-  width: 260px;  
+  width: 530px;  
   background-color: white;
   color: gray;
 `
 const StyledDeleteButton = styled(Button)`
-  width: 35px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 `
 const StyledNoteTitle = styled.span`
-  margin-left: 5px;
+  margin-left: 10px;
   margin-right: 10px;
-  width: 170px;
+  width: 370px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 `
 const StyledNoteModifyTime = styled.span`
-  width: 50px;
+  width: 150px;
   font-size: 14px;
 `
 
 const StyledConfirmButton = styled(Button)`
   margin-top: 20px;
-  width: 300px;
-  height: 40px;
+  width: 600px;
+  height: 60px;
 `
 
 export default class NoteList extends Component {
@@ -101,10 +101,11 @@ export default class NoteList extends Component {
             noteList.map((note, index) => {
               const modifyTime = new Date(note.modifyTime).toLocaleDateString()
               return (
-                <StyledNoteContainer>
+                <StyledNoteContainer
+                  key={note.title}
+                >
                   <StyledNoteItem
                     to={`/NewNote?title=${encodeURIComponent(note.title)}`}
-                    key={index}
                   >
                     <StyledNoteTitle>
                       {note.title}

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import styled from 'styled-px2vw'
 import {Button, Input, message} from 'antd';
 
 import {StyledContainer} from '../../bizCommon/commonStyle';
@@ -9,34 +9,38 @@ import {getQueryParam} from '../../common/url'
 import history from '../../common/history'
 
 const StyledTitle = styled(Input.TextArea)`
-  width: 300px;
+  width: 600px;
   margin-bottom: 20px;
 `
 const StyledTextarea = styled(Input.TextArea)`
-  width: 300px;
+  width: 600px;
 `
 const StyledBackContainer = styled(Link)`
   position: absolute;
-  top: 20px;
-  left: 5px;
+  top: 40px;
+  left: 20px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
 `
 const StyledBackListButton = styled(Button)`
   padding: 0;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   margin-right: 10px;
   background: none;
   border: none;
   color: white;
 `
+const StyledBackText = styled.span`
+  margin-left: 5px;
+  font-size: 30px;
+  color: white;
+`
 
 const StyledConfirmButton = styled(Button)`
   margin-top: 20px;
-  width: 300px;
-  height: 40px;
+  width: 600px;
+  height: 60px;
 `
 
 export default class NewNote extends Component {
@@ -120,7 +124,9 @@ export default class NewNote extends Component {
             icon="left"
             size="large"
           />
-          日记列表
+          <StyledBackText>
+            日记列表
+          </StyledBackText>
         </StyledBackContainer>
 
         <StyledTitle
