@@ -40,13 +40,16 @@ const StyledNoteTitle = styled.span`
   margin-left: 10px;
   margin-right: 10px;
   width: 370px;
+  font-size: 26px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: gray;
 `
 const StyledNoteModifyTime = styled.span`
   width: 150px;
-  font-size: 14px;
+  font-size: 26px;
+  color: gray;
 `
 
 const StyledConfirmButton = styled(Button)`
